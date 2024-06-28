@@ -1,0 +1,8 @@
+---
+services:
+  postgres_exporter:
+    image: quay.io/prometheuscommunity/postgres-exporter
+    environment:
+      DATA_SOURCE_NAME: "postgresql://<user>:<pass>@<host>:5432/repocloud_dev?sslmode=disable"
+    ports:
+      - "9187:9187"
